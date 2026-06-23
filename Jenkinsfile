@@ -6,9 +6,9 @@ pipeline {
 
         stage('Git Clone') {
             steps {
-	       git branch: 'main',
-                   credentialsId: 'github-pat',
-                   url: 'https://github.com/shinushiju/insurance-devops-project.git'
+	         git branch: 'main',
+                 credentialsId: 'github-pat',
+                 url: 'https://github.com/shinushiju/insurance-devops-project.git'
             }
         }
         
