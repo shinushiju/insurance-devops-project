@@ -26,7 +26,7 @@ pipeline {
 
         stage('Train Model') {
             steps {
-                sh 'python3 model/train.py'
+                sh './venv/bin/python model/train.py'
             }
         }
 
