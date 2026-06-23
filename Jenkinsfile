@@ -32,7 +32,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'sudo docker build -t insurance-app .'
+                sh 'docker build -t insurance-app .'
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
                 sh '''
                 docker tag insurance-app shinushiju/insurance-app:latest
                 docker push shinushiju/insurance-app:latest
-                '''
+               '''
             }
         }
 
