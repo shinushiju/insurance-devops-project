@@ -11,6 +11,17 @@ pipeline {
                    url: 'https://github.com/shinushiju/insurance-devops-project.git'
             }
         }
+        
+       stage('Install Dependencies') {
+ 	   steps {
+        	sh '''
+        	python3 -m venv venv
+        	. venv/bin/activate
+        	pip install --upgrade pip
+        	pip install -r app/requirements.txt
+        	'''
+    	  }
+       }
 
         stage('Install Dependencies') {
             steps {
