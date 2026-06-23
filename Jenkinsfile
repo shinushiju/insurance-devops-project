@@ -8,7 +8,7 @@ pipeline {
             steps {
 	       git branch: 'main',
                    credentialsId: 'github-pat',
-                   url: 'https://github.com/shinushiju/insurance-devops.git'
+                   url: 'https://github.com/shinushiju/insurance-devops-project.git'
             }
         }
 
