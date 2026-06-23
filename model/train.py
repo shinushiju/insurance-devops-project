@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-data = pd.read_csv('claims.csv')
+data = pd.read_csv('model/claims.csv')
 
 X = data.drop('fraud', axis=1)
 y = data['fraud']
